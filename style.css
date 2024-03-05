@@ -46,8 +46,8 @@ main {
     color: #0A3871;
 }
 
-#texto-encriptar::content {
-    border: none;
+#texto-encriptar:focus {
+    outline: none;
 }
 
 .btn {
@@ -178,7 +178,7 @@ main {
     }
     .campo-texto{
         width: 90%;
-        height: 60%;
+        height: 60vh;
     }
 
     #texto-encriptar{
@@ -190,17 +190,22 @@ main {
         justify-content: space-around;
         height: 10%;
     }
+
+    .btnEncriptar{
+        padding: 0;
+    }
     .campo-mensaje{
         width: 90%;
-        height: fit-content;
+        height: 40hv;
         position:static;  
-        background-color: #000;
     }
 
     .mensaje{
         width: 90%;
-        height: auto;
-        margin: 10px 0px 10px 30px
+        height: 30vh;
+        margin: 10px 0px 10px 30px;
+        resize: none;
+        overflow-y: hidden;
     }
 
     .sin-texto img{
@@ -210,7 +215,7 @@ main {
     .sin-texto{
         width: 85%;
         position: absolute;
-        height: fit-content;
+        height: auto;
         top: 88%;
         left: 7%;
         background-color: #fff;
@@ -229,13 +234,40 @@ main {
         width: 90%;
         padding: 1%;
         font-size: 15px;
-        position: relative;
-        top: -75px;
-        left: 40px;
+        bottom: 0;
         color: #0A3871;
-        border: 2px solid #0A3871;
-        cursor: pointer;
-        transition: 0.3s;
-        display: none;
     }
+}
+
+@media screen and (max-width:  425px){
+     .btn{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+     }
+
+     .btnDesencriptar{
+        width: 90%;
+        padding: 2%;
+        
+     }
+
+     .btnEncriptar{
+        width: 90%;
+        padding: 2%;
+        margin-bottom: 10px;
+     }
+
+     .sin-texto{
+        width: 70%;
+        margin-top: -25px;
+        margin-left: 40px;
+     }
+
+     .titulo {
+        font-size: 15px;}
+
+     header svg{
+        width: 90px;
+     }   
 }

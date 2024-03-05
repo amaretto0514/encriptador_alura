@@ -76,3 +76,5 @@ btnCopiar.addEventListener("click", function() {
     // Deselecciona el textarea
     campo_mensaje.setSelectionRange(0, 0);
 });
+
+
