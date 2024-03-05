@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    background-color: #D8DFE8;
+    font-family: 'Inter';
+}
+
+header {
+    margin: 1%;
+}
+
+.hidden{
+    display: none;
+}
+
+
+.titulo {
+    font-size: 25px;
+    margin-top: -30px;
+    margin-bottom: 5%;
+    text-align: center;
+    font-family: 'Inter';
+    font-weight: bold;
+    color: #0A3871;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.campo-texto {
+    width: 60%;
+    height: 80%;
+}
+
+#texto-encriptar {
+    width: 100%;
+    height: 55vh;
+    padding: 5%;
+    font-size: 32px;
+    color: #0A3871;
+    border: none;
+}
+
+#texto-encriptar::placeholder{
+    color: #0A3871;
+}
+
+#texto-encriptar::content {
+    border: none;
+}
+
+.btn {
+    width: 100%;
+    margin: 25px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnEncriptar {
+    width: 40%;
+    padding: 2%;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #0A3871;
+    color: #fff;
+    border: 2px solid #0A3871;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btnEncriptar:hover{
+    color: #0A3871;
+    background-color: #D8DFE8;
+    border:2px solid #0A3871;
+}
+
+.btnEncriptar:active{
+    box-shadow: inset 3px 3px 5px #ccc, inset -3px -3px 5px #ccc;
+
+}
+
+.btnDesencriptar {
+    width: 40%;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border: 2px solid #0A3871;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btnDesencriptar:hover{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.btnDesencriptar:active{
+    box-shadow: inset 3px 3px 5px #ccc, inset -3px -3px 5px #ccc;
+
+}
+
+
+.campo-mensaje {
+    width: 25%;
+    height: 85vh;
+    position:relative;
+    top: -50px;
+}
+
+.mensaje {
+    width: 85%;
+    height: 95%;
+    font-size: 32px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 15px 15px 15px 15px;
+    border: none;
+    box-shadow: 0px 15px 15px #ccc;
+}
+
+.btnCopiar {
+    width: 70%;
+    padding: 4%;
+    font-size: 20px;
+    border-radius: 15px;
+    background: none;
+    position: relative;
+    top: -75px;
+    left: 40px;
+    color: #0A3871;
+    border: 2px solid #0A3871;
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
+}
+
+.btnCopiar:hover{
+    color: #fff;
+    background-color: #0A3871;
+    border: #fff;
+}
+.btnCopiar:active{
+    box-shadow: inset 3px 3px 5px #000, inset -3px -3px 5px #000;
+}
+
+.sin-texto{
+    width: 90%;
+    position: absolute;
+    height: fit-content;
+    top: 15%;
+    left: 2%;
+    background-color: #fff;
+}
+
+.sin-texto img{
+    background-color: #fff;
+    width: 100%;
+}
+
+.sin-texto p {
+    font-size: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#texto-negro {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+@media screen and (max-width:  768px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .campo-texto{
+        width: 90%;
+        height: 60%;
+    }
+
+    #texto-encriptar{
+        width: 90%;
+        height:50%;
+    }
+
+    .btn{
+        justify-content: space-around;
+        height: 10%;
+    }
+    .campo-mensaje{
+        width: 90%;
+        height: fit-content;
+        position:static;  
+        background-color: #000;
+    }
+
+    .mensaje{
+        width: 90%;
+        height: auto;
+        margin: 10px 0px 10px 30px
+    }
+
+    .sin-texto img{
+        display: none;
+    }
+
+    .sin-texto{
+        width: 85%;
+        position: absolute;
+        height: fit-content;
+        top: 88%;
+        left: 7%;
+        background-color: #fff;
+    }
+
+    .sin-texto p {
+        font-size: 15px;
+    }
+    
+    #texto-negro {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .btnCopiar {
+        width: 90%;
+        padding: 1%;
+        font-size: 15px;
+        position: relative;
+        top: -75px;
+        left: 40px;
+        color: #0A3871;
+        border: 2px solid #0A3871;
+        cursor: pointer;
+        transition: 0.3s;
+        display: none;
+    }
+}
